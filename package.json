@@ -1,0 +1,53 @@
+{
+    "$schema": "node_modules/albatros/schema.json",
+    "name": "ru.topomatic.shp",
+    "displayName": "SHP",
+    "description": "Загрузка .shp, .dbf, .prj, .cpg, .idx, .shx",
+    "private": true,
+    "version": "1.0.0",
+    "main": "main.ts",
+    "author": {
+        "name": "ООО НПФ \"Топоматик\"",
+        "email": "support@topomatic.ru",
+        "url": "https://topomatic.ru"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/code-topomatic.ru/ru.albatros.shp.git"
+    },
+    "icon": "favicon",
+    "scripts": {
+        "serve": "albatros-cli serve",
+        "build": "albatros-cli build"
+    },
+    "devDependencies": {
+        "@types/shpjs": "^3.4.7",
+        "albatros": "*"
+    },
+    "dependencies": {
+        "shpjs": "^6.1.0"
+    },
+    "albatros": {
+        "actions": {
+            "shp:add:file": {
+                "label": "Добавить shape",
+                "cmd": "shp:add:file"
+            }
+        },
+        "context": {
+            "projectExpolorer:context:layer": [
+                {
+                    "action": "shp:add:file"
+                }
+            ]
+        },
+        "importers": [
+            {
+                "target": "wdx",
+                "description": "SHP",
+                "cmd": "shp:importer",
+                "filenamePattern": ".shape/"
+            }
+        ]
+    }
+}

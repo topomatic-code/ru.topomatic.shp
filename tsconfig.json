@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "esnext",
+      "lib": [
+        "esnext",
+        "dom",
+        "dom.iterable"
+      ],
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true,
+      "moduleResolution": "bundler",
+      "isolatedModules": true,
+      "moduleDetection": "force",
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUncheckedSideEffectImports": true
+    },
+    "include": [
+      "src",
+      "node_modules/albatros"
+    ]
+  }
+  
